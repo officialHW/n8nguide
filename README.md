@@ -18,7 +18,7 @@ This repository contains the companion materials for the **AI Workflow Builder G
 ## The core model
 
 <p align="center">
-  <img src="./assets/workflow-model.png" alt="From Trigger to Impact: Trigger, Understand, Decide, Act, Report" width="100%">
+  <img src="./assets/image_2.png" alt="From Trigger to Impact: Trigger, Understand, Decide, Act, Report" width="100%">
 </p>
 
 **Trigger → Understand → Decide → Act → Report**
