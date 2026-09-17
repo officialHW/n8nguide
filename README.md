@@ -1,4 +1,8 @@
-# ⚡ AI Workflow Builder Guide — Claude × n8n
+# AI Workflow Builder Guide — Claude × n8n
+
+<p align="center">
+  <img src="./assets/guide-cover.jpeg" alt="AI Workflow Builder Guide — Claude × n8n" width="100%">
+</p>
 
 > Build practical AI automations with Claude and n8n — without starting from a blank canvas.
 
@@ -12,6 +16,10 @@ This repository contains the companion materials for the **AI Workflow Builder G
 - `PUBLISHING.md` — notes for publishing the guide and implementing a review-before-download gate
 
 ## The core model
+
+<p align="center">
+  <img src="./assets/workflow-model.jpeg" alt="From Trigger to Impact: Trigger, Understand, Decide, Act, Report" width="100%">
+</p>
 
 **Trigger → Understand → Decide → Act → Report**
 
