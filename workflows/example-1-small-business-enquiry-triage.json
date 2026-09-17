@@ -1,0 +1,20 @@
+{
+  "name": "AI Enquiry Triage — Claude × n8n",
+  "nodes": [
+    {"parameters": {}, "id": "trigger", "name": "Webhook / Form Input", "type": "n8n-nodes-base.webhook", "typeVersion": 2, "position": [0, 0]},
+    {"parameters": {"jsCode": "const body = $json.body ?? $json;\nif (!body.message) throw new Error('Missing required field: message');\nreturn [{json: body}];"}, "id": "validate", "name": "Validate Input", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [220, 0]},
+    {"parameters": {"jsCode": "return [{json: {category: 'Sales', urgency: 'medium', summary: $json.message ?? '', reason: 'Demo structured output — replace with your Claude node'}}];"}, "id": "claude", "name": "Claude Classification", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [460, 0]},
+    {"parameters": {"conditions": {"string": [{"value1": "={{$json.category}}", "operation": "equals", "value2": "Sales"}]}}, "id": "route", "name": "Route Category", "type": "n8n-nodes-base.if", "typeVersion": 2, "position": [700, 0]},
+    {"parameters": {}, "id": "store", "name": "Store Result", "type": "n8n-nodes-base.noOp", "typeVersion": 1, "position": [940, -80]},
+    {"parameters": {}, "id": "review", "name": "Human Review / Other", "type": "n8n-nodes-base.noOp", "typeVersion": 1, "position": [940, 120]}
+  ],
+  "connections": {
+    "Webhook / Form Input": {"main": [[{"node": "Validate Input", "type": "main", "index": 0}]]},
+    "Validate Input": {"main": [[{"node": "Claude Classification", "type": "main", "index": 0}]]},
+    "Claude Classification": {"main": [[{"node": "Route Category", "type": "main", "index": 0}]]},
+    "Route Category": {"main": [[{"node": "Store Result", "type": "main", "index": 0}], [{"node": "Human Review / Other", "type": "main", "index": 0}]]}
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "guide-example-1"
+}
