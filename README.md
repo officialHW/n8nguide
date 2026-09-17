@@ -1,4 +1,4 @@
-# AI Workflow Builder Guide — Claude × n8n
+# AI Workflow Builder Guide - Claude × n8n
 
 <p align="center">
   <img src="./assets/guide-cover.png" alt="AI Workflow Builder Guide — Claude × n8n" width="100%">
@@ -10,10 +10,10 @@ This repository contains the companion materials for the **AI Workflow Builder G
 
 ## What is inside?
 
-- `GUIDE.md` — the complete beginner-friendly guide
-- `workflows/` — practical workflow examples and build notes
-- `assets/` — visual assets used by the guide
-- `PUBLISHING.md` — notes for publishing the guide and implementing a review-before-download gate
+- `GUIDE.md` - the complete beginner-friendly guide
+- `workflows/` - practical workflow examples and build notes
+- `assets/` - visual assets used by the guide
+- `PUBLISHING.md` - notes for publishing the guide and implementing a review-before-download gate
 
 ## The core model
 
