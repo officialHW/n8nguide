@@ -1,0 +1,20 @@
+{
+  "name": "The Signal Content Pipeline — Claude × n8n",
+  "nodes": [
+    {"parameters": {}, "id": "trigger", "name": "Topic / Article Input", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [0, 0]},
+    {"parameters": {"jsCode": "return [{json: {topic: $json.topic ?? 'Replace with your research topic', sources: $json.sources ?? []}}];"}, "id": "input", "name": "Prepare Research Input", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [220, 0]},
+    {"parameters": {"jsCode": "return [{json: {main_idea: 'Demo summary — connect your Claude node here', why_it_matters: '', evidence_to_verify: [], linkedin_angle: '', instagram_angle: '', newsletter_angle: '', sources: $json.sources ?? [], review_status: 'Needs review'}}];"}, "id": "claude", "name": "Claude Content Brief", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [500, 0]},
+    {"parameters": {"conditions": {"string": [{"value1": "={{$json.sources.length}}", "operation": "larger", "value2": "0"}]}}, "id": "guard", "name": "Source Check", "type": "n8n-nodes-base.if", "typeVersion": 2, "position": [760, 0]},
+    {"parameters": {}, "id": "notion", "name": "Save to Notion", "type": "n8n-nodes-base.noOp", "typeVersion": 1, "position": [1020, -80]},
+    {"parameters": {"jsCode": "return [{json: {...$json, review_status: 'Needs research'}}];"}, "id": "research", "name": "Needs Research", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [1020, 120]}
+  ],
+  "connections": {
+    "Topic / Article Input": {"main": [[{"node": "Prepare Research Input", "type": "main", "index": 0}]]},
+    "Prepare Research Input": {"main": [[{"node": "Claude Content Brief", "type": "main", "index": 0}]]},
+    "Claude Content Brief": {"main": [[{"node": "Source Check", "type": "main", "index": 0}]]},
+    "Source Check": {"main": [[{"node": "Save to Notion", "type": "main", "index": 0}], [{"node": "Needs Research", "type": "main", "index": 0}]]}
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "guide-example-2"
+}
