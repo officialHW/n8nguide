@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.65" stop-color="#f5f7ff"/><stop offset="1" stop-color="#eef8f5"/></linearGradient><linearGradient id="a" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6d4aff"/><stop offset="1" stop-color="#12a6b8"/></linearGradient></defs>
+<rect width="1600" height="1000" rx="48" fill="url(#g)"/>
+<circle cx="1430" cy="110" r="170" fill="#e8e2ff" opacity=".65"/><circle cx="110" cy="900" r="190" fill="#dff4ef" opacity=".7"/>
+<text x="100" y="100" font-family="Inter,Arial,sans-serif" font-size="24" letter-spacing="9" fill="#29324a">BUILD • AUTOMATE • CREATE • GROW</text>
+<text x="100" y="250" font-family="Inter,Arial,sans-serif" font-size="108" font-weight="800" fill="#10182e">AI Workflow</text>
+<text x="100" y="365" font-family="Inter,Arial,sans-serif" font-size="108" font-weight="800" fill="url(#a)">Builder Guide</text>
+<text x="104" y="435" font-family="Inter,Arial,sans-serif" font-size="42" fill="#25304b">Claude × n8n</text>
+<text x="104" y="490" font-family="Inter,Arial,sans-serif" font-size="27" fill="#59627a">Turn ideas into practical automations — no n8n experience needed.</text>
+<rect x="100" y="590" width="1400" height="280" rx="32" fill="#ffffff" stroke="#dce1ee" stroke-width="3"/>
+<g font-family="Inter,Arial,sans-serif"><g fill="#10182e" font-size="25" font-weight="700"><text x="180" y="680">TRIGGER</text><text x="530" y="680">UNDERSTAND</text><text x="880" y="680">DECIDE</text><text x="1230" y="680">ACT</text></g>
+<g stroke="url(#a)" stroke-width="8" fill="none"><path d="M280 720 H470"/><path d="M650 720 H820"/><path d="M1000 720 H1170"/></g>
+<g fill="#fff" stroke="#cfd6e6" stroke-width="3"><rect x="145" y="695" width="135" height="70" rx="18"/><rect x="495" y="695" width="155" height="70" rx="18"/><rect x="845" y="695" width="155" height="70" rx="18"/><rect x="1195" y="695" width="155" height="70" rx="18"/></g>
+<g fill="#6d4aff"><circle cx="280" cy="730" r="10"/><circle cx="650" cy="730" r="10"/><circle cx="1000" cy="730" r="10"/><circle cx="1195" cy="730" r="10"/></g>
+<text x="100" y="945" font-family="Inter,Arial,sans-serif" font-size="24" fill="#58627a">Beginner friendly  •  Real use cases  •  Drawdown-aware  •  Step-by-step</text></g>
+</svg>
